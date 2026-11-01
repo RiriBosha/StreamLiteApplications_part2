@@ -123,3 +123,21 @@ st.write(f"Your score: {score}")
 # ────────────────────────────────────────────────────────
 st.markdown("---")
 st.header("8 — Mini App: Build Your Profile")
+
+name2    = st.text_input("Your name")
+age2     = st.slider("Your age", 15, 80, 20)
+subject2 = st.selectbox("Your major", ["AI", "Computer Science", "Engineering", "Med"])
+hobby2   = st.radio("Favourite hobby", ["Reading", "Gaming", "Sports", "Coding"])
+student  = st.checkbox("I am a student")
+
+if st.button("Generate Profile Card"):
+    st.markdown("---")
+    st.subheader("📋 Your Profile Card")
+    st.write(f"**Name:**    {name2}")
+    st.write(f"**Age:**     {age2}")
+    st.write(f"**Major:**   {subject2}")
+    st.write(f"**Hobby:**   {hobby2}")
+    st.write(f"**Student:** {'Yes ✅' if student else 'No'}")
+    st.success("Profile created successfully!")
+
+
